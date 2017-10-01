@@ -18,7 +18,7 @@ module Apartment
     private
 
       def rescue_from
-        PG::Error
+        [PG::Error, ActiveRecord::StatementInvalid]
       end
     end
 
